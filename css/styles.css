@@ -1,0 +1,992 @@
+/* Carousel base class */
+*{-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;}
+@font-face{
+  font-family:'Raleway';
+  src: url(../fonts/Raleway-Light.ttf) format('truetype')
+}
+@font-face{
+  font-family:'Raleway-bold';
+  src: url(../fonts/Raleway-Bold.ttf) format('truetype')
+}
+::-moz-selection { /* Code for Firefox */
+    color: #fff;    
+    background: #d02922;
+}
+
+::selection {
+    color: #fff;
+    background: #d02922;
+}
+.font25{
+  font-size: 25px;
+}
+.raleway{
+  font-family: 'Raleway', sans-serif;
+}
+.ralewayBold{
+  font-family: 'Raleway-bold', sans-serif;
+}
+.homepage .navbar-header .scc_logo{display:none;}
+.commonNavigation .navbar-header .scc_logo{display:block;}
+body{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+body.homepage{
+  color: #000;
+  background: rgb(34, 34, 34);
+}
+.titleSection{
+  margin-top:50px;
+  background:#d02922;
+}
+.whiteBG{
+  background: #fff;
+}
+.grayBG{
+  background: #f8f8f8;
+}
+.fullWidth{
+  width: 100%;
+}
+.displayBlock{
+  display: block;
+}
+ul.noStyle{
+  list-style: none;
+}
+.noPadding{
+  padding: 0;
+}
+.noMargin{
+  margin: 0;
+}
+.margin5{
+  margin: 5px;
+}
+.margin10{
+  margin: 10px 0;
+}
+.marginBottom20{
+  margin: 0 0 20px;
+}
+.carousel {
+  height: 500px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  top: 100px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+/*------------------------Custom-------------------------- */
+.positionrel,.containwrappercontent{
+	position:relative;
+}
+ul{
+	list-style: inside;
+	margin-left:-20px;
+}
+ul.noListStyle{
+  list-style: none;
+}
+.padding-required{
+	padding:50px 0;
+}
+.paddingBottom30{
+	padding:0 0 30px 0;
+}
+.paddingBottom30Div{
+	padding:0 15px 30px;
+}
+.padding30{
+	padding:30px 0;
+}
+.bottom-padding-required{
+	padding-bottom:180px;
+}
+section.margin-top{
+	margin-top:-100px;
+}
+.containwrapper{
+	background: #000;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	opacity: 0.8;
+	z-index:1;
+}
+.containwrappercontent{
+	z-index:2;
+}
+.colorwhite{
+	color:#fff;
+}
+.anchorWhite a{
+	color:#fff;
+  text-decoration: none;
+}
+.backgroundred{
+	background:#da251d;
+}
+.banneroverlay{
+	margin-top:-100px;
+	color:#fff;
+	z-index:21;
+	padding: 30px 0 80px;
+}
+.contentOverlay{
+	background: #fff;
+	opacity: 0.7;
+	position: absolute;
+	z-index: 2;
+	height:100%;
+	width: 100%;
+}
+.contentOverlayContent{
+	color: #000;
+	position: relative;
+	z-index: 3;
+}
+/*---------All banners-----------*/
+/*Homepage*/
+.aboutus{
+	background:url('../img/aboutus-bg.png') no-repeat left bottom #fff;
+}
+.we-believe-in{
+	background:url('../img/we-believe-in.png') no-repeat right bottom #fff;
+}
+.contactus{
+	background:url('../img/contact-us.png') no-repeat left bottom #efefef;
+}
+.carousel .item{
+  background-color: #000;
+  background-size: 100%;
+}
+.eventDetail .carousel .item{
+  background-color: #000;
+  background-size: 100%;
+}
+.banner1{
+	background:url('../img/banner/banner1.jpg') no-repeat top center rgba(0, 0, 0, 1);
+}
+.banner2{
+	background:url('../img/banner/banner2.jpg') no-repeat top center rgba(0, 0, 0, 1);
+}
+.banner3{
+	background:url('../img/banner/banner3.jpg') no-repeat top center rgba(0, 0, 0, 1);
+}
+.banner4{
+	background:url('../img/banner/banner4.jpg') no-repeat top center rgba(0, 0, 0, 1);
+}
+/*Achivement Banner*/
+.achivementBanner1{
+  background:url('../img/achivements/img11.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner2{
+  background:url('../img/achivements/img22.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner3{
+  background:url('../img/achivements/img33.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner4{
+  background:url('../img/achivements/img44.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+/*Achivement Banner*/
+.achivementBanner1{
+  background:url('../img/achivements/img11.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner2{
+  background:url('../img/achivements/img22.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner3{
+  background:url('../img/achivements/img33.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+.achivementBanner4{
+  background:url('../img/achivements/img44.JPG') no-repeat top center rgba(0, 0, 0, 1);
+}
+/*event1*/
+.carousel .item.cricketEventBanner11{
+	background:url('../img/events/event1/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner12{
+	background:url('../img/events/event1/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner21{
+	background:url('../img/events/event2/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner22{
+	background:url('../img/events/event2/event1.jpg') no-repeat top center rgba(0,0,0,1);
+  background-size: auto;
+}
+.carousel .item.cricketEventBanner31{
+	background:url('../img/events/event3/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner51{
+	background:url('../img/events/event5/event.jpg') no-repeat center top;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner71{
+	background: url("../img/events/event7/event.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner72{
+	background: url("../img/events/event7/event1.jpg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner73{
+	background: url("../img/events/event7/event2.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner81{
+	background:url('../img/events/event8/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner91{
+	background:url('../img/events/event9/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: center center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner101{
+	background:url('../img/events/event10/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner102{
+	background:url('../img/events/event10/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner103{
+	background:url('../img/events/event10/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top -100px center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner104{
+	background:url('../img/events/event10/event3.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top -100px center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner105{
+	background:url('../img/events/event10/event4.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top -100px center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner111{
+	background: url("../img/events/event11/event.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner131{
+	background: url("../img/events/event13/event.jpg") no-repeat scroll center center / 36% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner141{
+  background: url("../img/events/event14/event.jpg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner142{
+	background: url("../img/events/event14/event1.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner161{
+	background:url('../img/events/event16/event.jpg') no-repeat center center;
+  background-position: center top;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner171{
+  background: url("../img/events/event17/event.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 1);
+}
+.carousel .item.cricketEventBanner181{
+	background:url('../img/events/event18/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 58%;
+}
+.carousel .item.cricketEventBanner191{
+	background:url('../img/events/event19/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner192{
+	background:url('../img/events/event19/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner193{
+	background:url('../img/events/event19/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner194{
+	background:url('../img/events/event19/event3.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 100%;
+}
+.carousel .item.cricketEventBanner201{
+	background:url('../img/events/event20/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-position: top center;
+  background-size: 100%;
+}
+/*Social event1*/
+.eventBanner1{
+	background:url('../img/socialEvents/event1/event.jpg') no-repeat center center;
+}
+.eventBanner2{
+	background:url('../img/socialEvents/event1/event1.jpg') no-repeat center center;
+}
+.map{
+	background: url('../img/map.png') no-repeat center center;
+	position: relative;
+	height: 300px;
+}
+.scc_logo{
+	background:url('../img/scc_logo_home.png') no-repeat center center;
+	background-size: 100% 100%;
+	position:absolute;
+	height:191px;
+	width:191px;
+	top:-120px;
+}
+.player_logo{
+	background:url('../img/player.png') no-repeat center center;
+	background-size: 100% 100%;
+	position:absolute;
+	height:90px;
+	width:81px;
+	top:50px;
+}
+/*Club mission*/
+.clubmission{
+	background:url('../img/club_mission.jpg') no-repeat top center #fff;
+}
+.ourteam{
+	background:url('../img/ourteam.jpg') no-repeat top center #fff;
+}
+.backgroundattached{
+	background-attachment: fixed;
+	background-size: cover;
+}
+.fullwidth{
+	width: 100%;
+}
+.halfwidth{
+	width: 50%;
+	margin:0 20px;
+}
+.padding-top{
+	padding-top:140px;
+}
+.padding-top-one{
+	padding-top:20px;
+}
+.padding-top-two{
+	padding-top:40px;
+}
+.padding-top-three{
+	padding-top:80px;
+}
+input{
+	padding-top: 10px;
+	margin: 15px 10px;
+	background: transparent;
+	font-size:18px;
+	border:none;
+}
+.border-bottom{
+	border-bottom:1px solid #333;
+}
+.padding-bottom-none{
+	padding-bottom:0;
+}
+.submit-btn{
+	background: #303030;
+	border-radius:5px;
+	color: #fff;
+	padding:10px 50px;
+}
+footer{
+	background: rgb(34, 34, 34);
+	padding: 18px 0;
+  position: relative;
+  z-index: 9;
+}
+.skewDiv{
+	 -webkit-transform:skewY(4deg);-moz-transform:skewY(4deg);
+}
+.skewDivContent{
+ -webkit-transform:skewY(-4deg);-moz-transform:skewY(-4deg);
+}
+.panel-heading{
+	height:250px;
+	overflow:hidden;
+}
+.navbar-inverse{
+	background: transparent;
+	border: none;
+}
+.navbar-inverse .containwrapper{
+	opacity: 0.8;
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a{
+	color: #fff;
+}
+.ourteammembers .jcarousel-control-next,.ourteammembers .jcarousel-control-prev ,.ourteammembers .jcarousel-control-next:hover,.ourteammembers .jcarousel-control-prev :hover,.ourteammembers .jcarousel-control-next:active,.ourteammembers  .jcarousel-control-prev :active{
+	color: #fff;
+	text-decoration: none;
+}
+.ourteam .bottom-padding-required{
+	padding: 100px 0;
+}
+.ourteammembers .ourteam_members{
+	width:100%;
+	height:100%;
+	background:url('img/players/Dhan.JPG') no-repeat center center;
+	background-size:cover !important;
+	position:relative;
+}
+.socialwork{
+	margin-bottom:-100px;
+}
+.testamonial li{
+	width: 1175px !important;
+}
+.socialwork .jcarousel li{
+	border:none;
+}
+.socialwork .panel{
+	background: transparent;
+	border:none;
+	color: #fff;
+}
+.socialwork .jcarousel-control-next,.socialwork  .jcarousel-control-prev{
+	display:none;
+}
+.overflowHidden{
+	overflow: hidden;
+}
+/*------------Events--------------------*/
+.padding50{ padding: 50px 0; }
+.playerListDetail{ padding: 15px;   border: 1px solid #ddd; border-bottom: 0; border-top: 0; }
+.padding2030{ padding: 20px 0 30px; }
+.padding300{ padding: 300px 0; }
+.padding100{ padding: 100px 0; }
+.padding-top-50{
+	padding-top:50px;
+}
+.margin-top-50{
+	margin-top:50px;
+}
+.margin-top-20{
+	margin-top:20px;
+}
+.event1{
+	background: url('../img/socialEvents/event1.jpg') no-repeat right top;
+	background-size: cover;
+	background-color: #000;
+}
+.event2{
+	background: url('../img/socialEvents/event2_1.jpg') no-repeat left top #fff;
+	background-size: cover;
+	background-color: #000;
+}
+.event3{
+	background: url('../img/socialEvents/event3.jpg') no-repeat right top;
+	background-size: cover;
+	background-color: #000;
+}
+.event4{
+	background: url('../img/socialEvents/event4.jpg') no-repeat center center;
+	background-color: #000;
+}
+.event5{
+	background: url('../img/socialEvents/event5.jpg') no-repeat center center;
+	background-color: #000;
+}
+.event6{
+	background: url('../img/socialEvents/event6.jpg') no-repeat center center;
+	background-color: #000;
+}
+#footer{
+  position: relative;
+  z-index: 9;
+}
+#footer .container{
+  position: relative;
+  z-index: 10;
+}
+.sscFooter{
+  border-left: 30px solid rgb(34, 34, 34);
+  border-top: 30px solid rgb(34, 34, 34);
+  border-right: 30px solid rgb(34, 34, 34);
+  position: absolute;
+  top:-20px;
+  width: 100%;
+  z-index: 8;
+}
+/*Social Works*/
+.eventName h2,
+.playerName h2,
+.socialWorkTitle  h2{
+  padding-left: 50px;
+}
+.commonNavigation .scc_logo {
+  background: url("../img/scc_logo_home.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0);
+  height: 80px;
+  left: 0;
+  position: absolute;
+  top: -10px;
+  width: 80px;
+}
+.commonNavigation .navbar > .container .navbar-brand, 
+.commonNavigation .navbar > .container-fluid .navbar-brand {
+  margin-left: 70px;
+}
+.socialWorkList li{
+  border: 1px solid #000;
+  padding: 0px;
+  color: #fff;
+  margin-bottom:20px;
+  background: rgba(0,0,0,0.6);
+}
+.socialWorkList li:nth-child(odd){
+  background-position: right bottom;
+  background-attachment:fixed;
+}
+.socialWorkList li:nth-child(even){
+  text-align: right;
+  background-position: left bottom;
+}
+.socialWorkList li:nth-child(odd):hover{
+  border-right: 10px solid #000;
+}
+.socialWorkList li:nth-child(even):hover{
+  border-left: 10px solid #000;
+}
+.socialWorkList li:nth-child(even) .socialWorkContent div{
+  float: right;
+}
+.socialWorkList li:nth-child(odd) .socialWork{
+  width: 225px;
+  height: 150px;
+  background: #000;
+  float: left;
+  margin-right: 10px;
+}
+.socialWorkList li:nth-child(even) .socialWork{
+  width: 225px;
+  height: 150px;
+  background: #000;
+  float: right;
+  margin-left: 10px;
+}
+/*event list images*/
+.socialWorkList li .socialWork.socialWork1 {
+  background: url('../img/events/event1/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork2 {
+  background: url('../img/events/event2/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork3 {
+  background: url('../img/events/event3/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork5 {
+  background: url('../img/events/event5/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork7 {
+  background: url('../img/events/event7/event.jpg') no-repeat center top -12px;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork8 {
+  background: url('../img/events/event8/event.jpg') no-repeat center top;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork9 {
+  background: url('../img/events/event9/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork10 {
+  background: url('../img/events/event10/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork11 {
+  background: url('../img/events/event11/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork13 {
+  background: url('../img/events/event13/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork14 {
+  background: url('../img/events/event14/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork16 {
+  background: url('../img/events/event16/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork17 {
+  background: url('../img/events/event17/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork18 {
+  background: url('../img/events/event18/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork19 {
+  background: url('../img/events/event19/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+.socialWorkList li .socialWork.socialWork20 {
+  background: url('../img/events/event20/event.jpg') no-repeat center center;
+  background-size: 100%;
+}
+
+.socialEventBanner11{
+  background:url('../img/socialEvents/event1/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner12{
+  background:url('../img/socialEvents/event1/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+
+.socialEventBanner21{
+  background:url('../img/socialEvents/event2/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner22{
+  background:url('../img/socialEvents/event2/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner23{
+  background:url('../img/socialEvents/event2/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner24{
+  background:url('../img/socialEvents/event2/event3.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+
+.socialEventBanner31{
+  background:url('../img/socialEvents/event3/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner32{
+  background:url('../img/socialEvents/event3/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner33{
+  background:url('../img/socialEvents/event3/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner34{
+  background:url('../img/socialEvents/event3/event3.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner35{
+  background:url('../img/socialEvents/event3/event4.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner36{
+  background:url('../img/socialEvents/event3/event5.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+
+.socialEventBanner41{
+  background:url('../img/socialEvents/event4/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner42{
+  background:url('../img/socialEvents/event4/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner43{
+  background:url('../img/socialEvents/event4/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner44{
+  background:url('../img/socialEvents/event4/event3.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner45{
+  background:url('../img/socialEvents/event4/event4.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner46{
+  background:url('../img/socialEvents/event4/event5.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+
+.socialEventBanner51{
+  background:url('../img/socialEvents/event5/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner52{
+  background:url('../img/socialEvents/event5/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner53{
+  background:url('../img/socialEvents/event5/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+
+.socialEventBanner61{
+  background:url('../img/socialEvents/event6/event.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner62{
+  background:url('../img/socialEvents/event6/event1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.socialEventBanner63{
+  background:url('../img/socialEvents/event6/event2.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: 100%;
+}
+.contactUs{
+  background:url('../img/map1.jpg') no-repeat center center rgba(0,0,0,1);
+  background-size: cover;
+  padding: 140px 0;
+}
+
+/*SCC Events bg*/
+/*.socialWorkList li.eventListBlankBg{
+    background: rgba(0,0,0,0.8);
+}
+.socialWorkList li.eventListBg1{
+  background: url('../img/events/event1/event.jpg');
+  background-attachment:fixed;
+}
+.socialWorkList li.eventListBg2{
+  background: url('../img/events/event2/event.jpg');
+  background-attachment:fixed;
+}
+.socialWorkList li.eventListBg3{
+  background: url('../img/events/event3/event.jpg');
+  background-attachment:fixed;
+}
+.socialWorkList li.eventListBg4{
+  background: url('../img/events/event2/event.jpg');
+  background-attachment:fixed;
+}*/
+.shadowDiv{
+  background: rgba(0, 0, 0, 0.8);
+}
+.socialWorkContent h2{
+  margin: 0;
+}
+.socialWorkContent{
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+}
+/*Social Event Details*/
+.socialEvents .carousel .item,
+.socialEvents .carousel{
+  height: 400px;
+}
+/*player detail section*/
+.playerDetail{
+  border: 1px solid #bbb;
+  width: 323px;
+  height: 272px;
+  float: left;
+  margin-right: 20px;
+  background: url('../img/players/noImage.jpg') no-repeat center center rgba(0, 0, 0, 1);
+  background-size: cover;
+}
+.Abhishek{
+  background: url('../img/players/Abhishek.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Ashpak{
+  background: url('../img/players/ashpak.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Amit{
+  background: url('../img/players/Amit.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Amol{
+  background: url('../img/players/Amol.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Anurag{
+  background: url('../img/players/Anurag.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Chetan{
+  background: url('../img/players/Chetan.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Deju{
+  background: url('../img/players/Deju.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Dhan{
+  background: url('../img/players/Dhan.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Harry{
+  background: url('../img/players/Harry.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.ganesh{
+  background: url('../img/players/ganesh.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Harish{
+  background: url('../img/players/Harry.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Hemant{
+  background: url('../img/players/hemant.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Guru{
+  background: url('../img/players/Guru.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Kiran{
+  background: url('../img/players/Kiran.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Nikit{
+  background: url('../img/players/Nikit.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Parag{
+  background: url('../img/players/Parag.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Prasad{
+  background: url('../img/players/Prasad.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+/*.Rajnish{
+  background: url('../img/players/Ravi.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}*/
+.Ravi{
+  background: url('../img/players/Ravi.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Sandip{
+  background: url('../img/players/Sandip.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Satish{
+  background: url('../img/players/Satish.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Subhash{
+  background: url('../img/players/Subhash.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+.Sudhakar{
+  background: url('../img/players/Sudhakar.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+/*.Vinod{
+  background: url('../img/players/Yuvraj.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}*/
+.Yuvraj{
+  background: url('../img/players/Yuvraj.jpg') no-repeat scroll center center / cover  rgba(0, 0, 0, 1) !important;
+}
+/*player list section*/
+.playerListingSection li{
+  margin-bottom: 30px;
+}
+.playerListingSection li .listPlayerContainer{
+  border-bottom: 3px solid #d0221a;
+  background: #fff;
+}
+.listPlayerContainer .playerListImg{
+  height: 200px;
+  background: url('../img/players/noImage.jpg') no-repeat center center rgba(0, 0, 0, 1);
+  background-size: cover;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+}
+.control-title{
+  display: inline-block;
+  width: 180px;
+}
+.pdfSection{
+  height: 900px;
+}
+/*Gallery*/
+.galleryList{
+  margin-left: 0;
+}
+.galleryList li{
+  padding-top: 30px;
+  height: 250px;
+  overflow: hidden;
+}
+.galleryList li a{
+  text-align: center;
+  line-height: 275px;
+  text-align: center;
+  vertical-align: center;
+  background: #888;
+}
+.modal-content {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+.btn-primary {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.statistics{
+  overflow-y: scroll;
+}
+/*@media (min-width:768px) and (max-width:991px){*/
+@media (max-width:1200px){
+	.player_logo{display:none;}
+  .banneroverlay{padding: 20px 0 50px;}
+  .banneroverlay h2{text-align: right;}
+  .padding-top-two, .padding-top-three { padding-top: 20px;}
+  .clubmission{padding-bottom: 60px;}
+  .bottom-padding-required{padding-bottom: 80px;}
+  .aboutus, .we-believe-in{ background: #fff;}
+  .padding-top { padding-top: 10px; }
+  .carousel, .carousel-inner{ height: 450px;}
+  /*event Description*/
+  .eventDescription{ margin-top: 50px;}
+  .eventDetailRightBar{ margin-top: 30px;}
+}
+@media (max-width:1023px){
+	.clubmission{padding-bottom:50px;}
+  .navbar-nav > li > a{padding: 15px 8px;}
+  .carousel, .carousel-inner, .carousel .item{ height: 300px;}
+  .banneroverlay{margin-top: -50px;}
+  .padding-required{ padding: 70px 0;}
+  .socialEvents .carousel .item, .socialEvents .carousel{ height: 300px;}
+  .achivements .scc_logo{display:none;}
+  .achivements .navbar > .container .navbar-brand, 
+  .achivements  .navbar > .container-fluid .navbar-brand{ margin: 0;padding: 15px 10px 15px 0;}
+  .commonNavigation .navbar-header .scc_logo{ display:none; }
+  .commonNavigation .navbar > .container .navbar-brand, 
+  .commonNavigation .navbar > .container-fluid .navbar-brand {margin-left:0;}
+}
+@media (max-width:767px){
+  .navbar-nav > li > a{padding: 8px;text-align: center;border-bottom: 1px solid #5a5a5a;}
+  footer{text-align: center;}
+  footer .text-right{text-align: center;}
+  .playerDescription{ padding: 50px 20px;}
+  .playerDescription .playerDetail{ margin-bottom: 20px;}
+  .playerListingSection{padding-left: 20px;}
+  /*Achivement Banner*/
+  .achivementBanner1{background:url('../img/achivements/img1.JPG');}
+  .achivementBanner2{background:url('../img/achivements/img2.JPG');}
+  .achivementBanner3{background:url('../img/achivements/img3.JPG');}
+  .achivementBanner4{background:url('../img/achivements/img4.JPG');}
+  .achivementName h2{ padding: 0 0 0 20px;}
+  .achivements .scc_logo{display:block;}
+  .achivements .navbar > .container .navbar-brand, 
+  .achivements  .navbar > .container-fluid .navbar-brand{ margin-left : 15px;padding-left: 15px;}
+  .commonNavigation .navbar-header .scc_logo{display:block;}
+  .commonNavigation .navbar > .container .navbar-brand, 
+  .commonNavigation .navbar > .container-fluid .navbar-brand {margin-left:70px;}
+}
+@media (max-width:639px){
+  .carousel .item{background-size: 100%;background-repeat: no-repeat; background-position: center;}
+  .banner1{background:url('../img/banner/banner11.jpg');}
+  .banner2{background:url('../img/banner/banner22.jpg');}
+  .banner3{background:url('../img/banner/banner33.jpg');}
+  .banner4{background:url('../img/banner/banner44.jpg');}
+  .scc_logo{ display:none;}
+  .navbar-header .scc_logo{display:block;height: 80px;left: 0;position: absolute;top: -10px;width: 80px;}
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {margin-left: 70px;}
+  .aboutus .padding-top-two, .aboutus  .padding-top-three{padding-top: 60px;}
+}
